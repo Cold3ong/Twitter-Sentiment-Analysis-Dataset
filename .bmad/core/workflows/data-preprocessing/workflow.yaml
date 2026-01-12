@@ -1,0 +1,28 @@
+name: "data-preprocessing"
+description: "Run dataset EDA, apply reproducible cleaning pipeline, compute features/embeddings, topic modeling, and persist validated artifacts."
+author: "BMad"
+
+config_source: "{project-root}/.bmad/cis/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+
+installed_path: "{project-root}/.bmad/core/workflows/data-preprocessing"
+instructions: "{installed_path}/instructions.md"
+template: "{installed_path}/template.md"
+validation: "{installed_path}/checklist.md"
+
+default_output_file: "{output_folder}/data-preprocessing-results-{{date}}.md"
+
+standalone: true
+
+web_bundle:
+  name: "data-preprocessing"
+  description: "Data pre-processing workflow for EDA, cleaning, feature engineering, precompute embeddings and persisting artifacts with validations."
+  author: "BMad"
+  instructions: ".bmad/core/workflows/data-preprocessing/instructions.md"
+  checklist: ".bmad/core/workflows/data-preprocessing/checklist.md"
+  template: ".bmad/core/workflows/data-preprocessing/template.md"
+  web_bundle_files:
+    - ".bmad/core/workflows/data-preprocessing/instructions.md"
+    - ".bmad/core/workflows/data-preprocessing/checklist.md"
+    - ".bmad/core/workflows/data-preprocessing/template.md"

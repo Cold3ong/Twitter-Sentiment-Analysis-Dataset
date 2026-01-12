@@ -1,0 +1,23 @@
+name: bigdata
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - openjdk=17
+  - pip
+  - numpy=1.24.4
+  - pandas=2.1.3
+  - pyarrow=11.0.0
+  - matplotlib=3.10.7
+  - seaborn=0.13.2
+  - ipykernel
+  - pip:
+    - pyspark==3.5.7
+    - sentence-transformers==2.2.2
+    - vaderSentiment==3.3.2
+    - gensim==4.3.1
+    - scikit-learn==1.6.1
+    - py4j==0.10.9.7
+    - tqdm
+    - jupyterlab
+## Removed duplicate older ssa_env_py310 block to keep a single environment definition for `bigdata`.

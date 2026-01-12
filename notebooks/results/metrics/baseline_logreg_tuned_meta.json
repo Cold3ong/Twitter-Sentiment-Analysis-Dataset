@@ -1,0 +1,4 @@
+{
+  "loaded_from_disk": true,
+  "pipeline_path": "models\\pipelines\\baseline_logreg_tuned"
+}

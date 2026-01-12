@@ -1,0 +1,42 @@
+{
+  "per_class": [
+    {
+      "class": 0,
+      "tp_baseline": 0.0,
+      "precision_baseline": 0.0,
+      "recall_baseline": 0.0,
+      "f1_baseline": 0.0,
+      "tp_rf_tuned": 0.0,
+      "precision_rf_tuned": 0.0,
+      "recall_rf_tuned": 0.0,
+      "f1_rf_tuned": 0.0
+    },
+    {
+      "class": 1,
+      "tp_baseline": 0.0,
+      "precision_baseline": 0.0,
+      "recall_baseline": 0.0,
+      "f1_baseline": 0.0,
+      "tp_rf_tuned": 0.0,
+      "precision_rf_tuned": 0.0,
+      "recall_rf_tuned": 0.0,
+      "f1_rf_tuned": 0.0
+    },
+    {
+      "class": 2,
+      "tp_baseline": 0.0,
+      "precision_baseline": 0.0,
+      "recall_baseline": 0.0,
+      "f1_baseline": 0.0,
+      "tp_rf_tuned": 0.0,
+      "precision_rf_tuned": 0.0,
+      "recall_rf_tuned": 0.0,
+      "f1_rf_tuned": 0.0
+    }
+  ],
+  "labels": [
+    "0",
+    "1",
+    "2"
+  ]
+}

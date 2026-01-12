@@ -1,0 +1,4 @@
+name,description,module,path,standalone
+"brainstorming","Facilitate interactive brainstorming sessions using diverse creative techniques. This workflow facilitates interactive brainstorming sessions using diverse creative techniques. The session is highly interactive, with the AI acting as a facilitator to guide the user through various ideation methods to generate and refine creative solutions.","core",".bmad/core/workflows/brainstorming/workflow.yaml","true"
+"party-mode","Orchestrates group discussions between all installed BMAD agents, enabling natural multi-agent conversations","core",".bmad/core/workflows/party-mode/workflow.yaml","true"
+"data-preprocessing","Run dataset EDA, apply reproducible cleaning pipeline, compute features and embeddings, and save artifacts","core",".bmad/core/workflows/data-preprocessing/workflow.yaml","true"

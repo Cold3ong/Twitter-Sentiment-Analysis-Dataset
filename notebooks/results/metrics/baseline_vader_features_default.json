@@ -1,0 +1,20 @@
+{
+  "accuracy": 0.9293785310734464,
+  "macro_f1": 0.9289442486669827,
+  "weighted_f1": 0.929594391264966,
+  "labels": [
+    0,
+    1,
+    2
+  ],
+  "features_used": [
+    "char_count",
+    "word_count",
+    "hashtag_count",
+    "mention_count",
+    "ticker_count",
+    "caps_ratio",
+    "emoji_count",
+    "vader_compound"
+  ]
+}

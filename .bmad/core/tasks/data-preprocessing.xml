@@ -1,0 +1,57 @@
+<task id="{bmad_folder}/core/tasks/data-preprocessing" name="Data Preprocessing" description="Reproducible dataset EDA, cleaning, feature engineering, embedding precompute, persistence and validation for `stock_market_crash_2022.csv`" webskip="false" standalone="true">
+  <llm critical="true">
+    <i>MANDATORY: Execute ALL steps in sequence and do not leak test data information into training artifacts.</i>
+    <i>Ensure all fitted transformers/embedders are trained on train set only.</i>
+  </llm>
+
+  <flow>
+    <step n="1" title="Confirm inputs & run EDA">
+      <i>Validate CSV schema, check counts, label distribution, missing values, duplicates, and collect top hashtags/mentions/tickers.</i>
+    </step>
+
+    <step n="2" title="Apply normalization">
+      <i>Perform unicode NFKC normalization, html unescape, URL and handle replacement, ticker normalization, collapse whitespace, preserve emojis.</i>
+    </step>
+
+    <step n="3" title="Feature extraction">
+      <i>Extract hashtag_count, mention_count, ticker_count, emoji_count, char_count, word_count, caps_ratio, and precompute VADER features if available.</i>
+    </step>
+
+    <step n="4" title="Tokenization & Vectorization">
+      <i>Implement classical TF-IDF/char-ngram transformers and embedding compute (SBERT/USE) pipelines. Fit on training data only.</i>
+    </step>
+
+    <step n="5" title="Optional LDA / topic features">
+      <i>Fit LDA on training tokens and add topic distribution feature vectors to the dataset.</i>
+    </step>
+
+    <step n="6" title="Persist artifacts & precompute embeddings">
+      <i>Save processed train/test `parquet` files, serialization of fitted pipelines, precomputed embeddings, and an `artifact_manifest.json`.</i>
+    </step>
+
+    <step n="7" title="QA checks">
+      <i>Assert counts are preserved, validate no null/empty text rows, confirm label map, and save reproducibility report.</i>
+    </step>
+
+    <step n="8" title="Update PRD & report results">
+      <i>Programmatically update PRD (section 9) with the finalized EDA summary and cleaning decisions; save `docs/prd-sentiment-analysis_v2.md`.</i>
+    </step>
+  </flow>
+
+  <output-format>
+    <example>
+      - cleaned train/test parquet files saved in `data/processed/v1/` 
+      - preprocessing pipeline preserving fit artifacts in `models/pipelines/cleaning_pipeline_v1/` 
+      - reproducibility files in `results/` (combined_counts.csv, label_map.json, artifact_manifest.json)
+    </example>
+  </output-format>
+
+  <halt-conditions critical="true">
+    <i>HALT if CSV not present or not accessible</i>
+    <i>HALT if train/test split cannot be determined and a default split would violate assignment requirements</i>
+  </halt-conditions>
+
+  <validation>
+    <i>Ensure transformations are applied consistently and artifacts are reproducible under the same `seed`.</i>
+  </validation>
+</task>
