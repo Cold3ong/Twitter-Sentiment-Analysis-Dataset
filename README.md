@@ -97,12 +97,8 @@ This script runs preprocessing and baseline model training, saving all outputs t
 - **Instructor:** Dr. Ken FONG
 - **Course:** DSAI4205 - Big Data Analytics
 - **Team Roles:**
-	- Product Owner / PM: Name1
-	- Data Engineer: Name2
-	- Architect / Model Lead: architech
-	- ML Engineer: Name3
-	- Analyst: Name4
-	- QA/Reviewer: Name5
+	- Wong Keng Wa Kovey
+    ....
 
 ## License
 For academic use only. See course policies for details.
