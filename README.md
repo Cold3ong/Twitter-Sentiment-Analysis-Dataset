@@ -96,9 +96,12 @@ This script runs preprocessing and baseline model training, saving all outputs t
 ## Team & Credits
 - **Instructor:** Dr. Ken FONG
 - **Course:** DSAI4205 - Big Data Analytics
-- **Team Roles:**
-	- Wong Keng Wa Kovey
-    ....
+- **Team Member:**
+    LAU TSZ KIU
+    SO WING KIN  
+    WONG KENG WA KOVEY 
+    CHEUNG YUN TONG 
+    Chan Ho Lok
 
 ## License
 For academic use only. See course policies for details.
